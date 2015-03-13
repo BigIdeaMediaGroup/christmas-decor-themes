@@ -903,6 +903,7 @@ body {
     font-family: "Lato";
     font-size: 13px;
     font-size: 1.3rem;
+    color: #747474;
 }
 
 a:link, a:visited {
@@ -912,6 +913,18 @@ a:link, a:visited {
 a:focus, a:hover, a:active {
     color: #B31106;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: black;
+	font-family: Lustria, serif;
+	font-weight: 400;
+}
+
 
 /* Headers */
 
@@ -1040,6 +1053,16 @@ div.menu-all-pages-container ul li.current_page_item a {
 	font-size: 14px;
 }
 
+.tagline-box h2 {
+	margin: 0 0 1rem;
+}
+
+.tagline-box span {
+	line-height: 20px;
+	line-height: 2rem;
+	
+}
+
 .christmas-list ul {
 	list-style: outside none none;
 	padding-left: 30px;
@@ -1054,7 +1077,7 @@ div.menu-all-pages-container ul li.current_page_item a {
 	color: #FFF !important;
 	font-family: FontAwesome;
     content: "\f054";
-	background-color: #223F69;
+	background-color: #B31106;
 	border-radius: 75px;
 	text-align: center;
 	display: inline-block;
@@ -1133,19 +1156,43 @@ div.menu-all-pages-container ul li.current_page_item a {
 
 /* jQuery UI Accordion */
 
-.ui-accordion-header {
+.ui-accordion .ui-accordion-header {
 	background: none;
 	border: none;
 	border-bottom: 1px solid #E8E6E6;
-	padding: 10px 0px;
+	padding: 10px 0;
+	padding: 1rem 0;
+	color: black;
 }
 
-.ui-accordion-header::before {
+.ui-accordion .ui-accordion-header:hover {
+	color:#B31106;
+}
+
+.ui-accordion .ui-accordion-header::before {
 	content: url('images/toggle_plus.png');
 	background-color: #333;
-	padding: .2rem;
+	padding: 1.5px 7.5px;
+	padding: 0.15rem .75rem;
+	margin-right: 1.8rem;
 }
 
-.ui-accordion-header-active {
-	
+.ui-accordion .ui-accordion-header-active {
+	border: none;
 }
+
+.ui-accordion .ui-accordion-header-active::before {
+	content: url('images/toggle_minus.png');
+	background-color: #B31106;
+}
+
+.ui-accordion .ui-accordion-content {
+	border: none;
+	padding: 10px 15px 40px;
+	color: #747474;
+}
+
+.ui-accordion .ui-accordion-content.ui-accordion-content-active {
+	border-bottom: 1px solid #E8E6E6;
+}
+
