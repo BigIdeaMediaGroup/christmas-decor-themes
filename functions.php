@@ -137,3 +137,8 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Load Google Fonts for theme.
+ */
+require get_template_directory() . '/inc/fonts.php';
+
