@@ -12,9 +12,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bimg-base' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'bimg-base' ), 'WordPress' ); ?></a>
+            Copyright <?php echo date('Y'); ?>
+			<a href="http://marketing-media-management.com">Powered by Marketing Media Management</a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'bimg-base' ), 'BIMG Base', '<a href="https://github.com/BigIdeaMediaGroup/" rel="designer">Big Idea Media Group</a>' ); ?>
+			Website Design and Themes by <a href="http://bigideamediagroup.com" rel="designer">Big Idea Media Group</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
