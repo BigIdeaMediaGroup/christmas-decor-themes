@@ -893,8 +893,24 @@ object {
     display: none;
 }
 
+html {
+    /* Allows setting base 10 rem sizes. For example, 1.4rem == 14px */
+    font-size: 62.5%;
+}
+
 body {
     background: url('images/red-flakes-repeating.png') repeat;
+    font-family: "Lato";
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+a:link, a:visited {
+    color: #000;
+}
+
+a:focus, a:hover, a:active {
+    color: #B31106;
 }
 
 /* Headers */
@@ -920,6 +936,7 @@ body {
     color: #fff;
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-size: 12px;
+    font-size: 1.2rem;
     line-height: 43px;
 }
 
@@ -940,30 +957,33 @@ div.site-branding {
     padding: 31px 10px;
 }
 
-div.menu {
+div.menu-all-pages-container {
+    font-family: Lustria;
+    font-size: 14px;
+    font-size: 1.4rem;
     display: inline-block;
     margin: 1 auto 0;
 }
 
-div.menu ul li {
+div.menu-all-pages-container ul li {
     margin-right: 35px;
     height: 46px;
     line-height: 1;
-    padding: 1em 0;
+    padding: 17.5px 0;
     text-transform: uppercase;
 }
 
-div.menu ul li:last-child  {
+div.menu-all-pages-container ul li:last-child  {
     margin-right: 0;
 }
 
-div.menu ul li.current_page_item {
+div.menu-all-pages-container ul li.current_page_item {
     border-top: 3px solid #B31106;
-    padding-top: 13px;
+    padding-top: 14.5px;
     color: #B31106;
 }
 
-div.menu ul li.current_page_item a {
+div.menu-all-pages-container ul li.current_page_item a {
     color: #B31106;
 }
 
