@@ -894,7 +894,7 @@ object {
 }
 
 html {
-    /* Allows setting base 10 rem sizes. For example, 1.4rem == 14px */
+    /* Allows setting base-10 rem sizes. For example, 1.4rem == 14px */
     font-size: 62.5%;
 }
 
@@ -928,7 +928,6 @@ h6 {
 	font-weight: 400;
 }
 
-
 /* Headers */
 
 #masthead {
@@ -936,7 +935,9 @@ h6 {
     background: url('images/red-light-repeating.png') repeat-x;
 }
 
-#header-wrapper, #content, #site-navigation {
+#header-wrapper,
+#content,
+#site-navigation {
     max-width: 1170px;
     margin: 0 auto;
     background: #fff;
@@ -1085,7 +1086,6 @@ footer#colophon a:active {
 .tagline-box span {
 	line-height: 20px;
 	line-height: 2rem;
-	
 }
 
 .christmas-list ul {
@@ -1174,7 +1174,8 @@ footer#colophon a:active {
     border-top: 3px solid #B31106;
 }
 
-/* EXAMPLE: If you include tabs on a page, change this percentage according to the number of tabs! */
+/* EXAMPLE: If you include tabs on a page, specify the id of the tab group and
+ * calculate the percentage according to the number of tabs. */
 #cd-tab-test .ui-tabs-nav li {
     width: 33.27%;
 }
