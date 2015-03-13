@@ -1110,3 +1110,22 @@ div.menu ul li.current_page_item a {
 #cd-tab-test .ui-tabs-nav li {
     width: 33.27%;
 }
+
+/* jQuery UI Accordion */
+
+.ui-accordion-header {
+	background: none;
+	border: none;
+	border-bottom: 1px solid #E8E6E6;
+	padding: 10px 0px;
+}
+
+.ui-accordion-header::before {
+	content: url('images/toggle_plus.png');
+	background-color: #333;
+	padding: .2rem;
+}
+
+.ui-accordion-header-active {
+	
+}
