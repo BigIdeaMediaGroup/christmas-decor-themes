@@ -929,9 +929,15 @@ body {
 
 #site-navigation {
     height: 49px;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 2px solid #d9d9d9;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
     text-align: center;
+}
+
+div.site-branding {
+    float: left;
+    height: 129px;
+    padding: 31px 10px;
 }
 
 div.menu {
@@ -940,18 +946,25 @@ div.menu {
 }
 
 div.menu ul li {
+    margin-right: 35px;
     height: 46px;
-    padding-right: 35px;
+    line-height: 1;
+    padding: 1em 0;
     text-transform: uppercase;
 }
 
 div.menu ul li:last-child  {
-    padding-right: 0;
+    margin-right: 0;
 }
 
-div.menu ul li.current_page_item  a {
-    border-top: 3px solid red;
-    padding-top: 3px;
+div.menu ul li.current_page_item {
+    border-top: 3px solid #B31106;
+    padding-top: 13px;
+    color: #B31106;
+}
+
+div.menu ul li.current_page_item a {
+    color: #B31106;
 }
 
 /* Page Layout */
@@ -1033,4 +1046,67 @@ div.menu ul li.current_page_item  a {
 	margin-right: 0px;
 	margin-left: -30px;
 	margin-top: 4px;
+}
+
+/* jQuery UI */
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-left,
+.ui-corner-tr,
+.ui-corner-br,
+.ui-corner-tl,
+.ui-corner-bl {
+    border-radius: 0;
+}
+
+/* jQuery UI Tabs */
+
+.ui-tabs {
+    padding: 0;
+    border: 1px solid #EBEAEA;
+}
+
+.ui-tabs .ui-tabs-nav {
+    padding: 0;
+    border: none;
+    background: inherit;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-default {
+    margin: 0 1px 0 0;
+    background: #EBEAEA;
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-default:last-child {
+    margin: 0;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-hover {
+    background: #FFF;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background: #FFF;
+}
+
+.ui-tabs .ui-tabs-nav li .ui-tabs-anchor {
+    width: 100%;
+}
+
+.ui-tabs .ui-tabs-nav li .ui-tabs-anchor:focus {
+    outline: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    padding-top: 5.8px;
+    border-top: 3px solid #B31106;
+}
+
+/* EXAMPLE: If you include tabs on a page, change this percentage according to the number of tabs! */
+#cd-tab-test .ui-tabs-nav li {
+    width: 33.27%;
 }
