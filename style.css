@@ -974,7 +974,7 @@ div.site-branding {
     padding: 31px 10px;
 }
 
-div.menu-all-pages-container {
+.main-navigation div {
     font-family: Lustria;
     font-size: 14px;
     font-size: 1.4rem;
@@ -982,7 +982,7 @@ div.menu-all-pages-container {
     margin: 1 auto 0;
 }
 
-div.menu-all-pages-container ul li {
+.main-navigation div ul li {
     margin-right: 35px;
     height: 46px;
     line-height: 1;
@@ -990,18 +990,21 @@ div.menu-all-pages-container ul li {
     text-transform: uppercase;
 }
 
-div.menu-all-pages-container ul li:last-child  {
+.main-navigation div ul li:last-child  {
     margin-right: 0;
 }
 
-div.menu-all-pages-container ul li.current_page_item {
+.main-navigation div ul li.current_page_item {
     border-top: 3px solid #B31106;
     padding-top: 14.5px;
     color: #B31106;
 }
 
-div.menu-all-pages-container ul li.current_page_item a {
+.main-navigation div ul li.current_page_item a {
     color: #B31106;
+}
+
+.sticky-nav {
 }
 
 /* Footer */

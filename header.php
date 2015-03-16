@@ -15,6 +15,11 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<script>
+    jQuery(document).ready(function(){
+        jQuery("#site-navigation").sticky({topSpacing:0});
+});
+</script>
 </head>
 
     <body <?php body_class(); ?>>
@@ -34,7 +39,7 @@
                 </div><!-- .social-icons -->
             </div>
 
-            <nav id="site-navigation" class="main-navigation" role="navigation">
+            <nav id="site-navigation" class="main-navigation sticky-navigation" role="navigation">
                 <button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'bimg-base' ); ?></button>
                 <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             </nav><!-- #site-navigation -->
