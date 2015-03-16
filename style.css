@@ -906,6 +906,10 @@ body {
     color: #747474;
 }
 
+a {
+    text-decoration: none;
+}
+
 a:link,
 a:visited {
     color: #000;
@@ -1037,6 +1041,10 @@ footer#colophon a:active {
 
 /* Page Elements */
 
+.title {
+    margin: 1rem 0;
+}
+
 .title h1,
 .title h2,
 .title h3,
@@ -1066,7 +1074,7 @@ footer#colophon a:active {
 
 .tagline-box {
 	/* Layout */
-	margin: 40px 0 20px 0;
+	margin-bottom: 30px;
 	padding: 28px 28px 27px 31px;
 	/* Colors */
 	background-color: #F6F6F6;
@@ -1089,6 +1097,44 @@ footer#colophon a:active {
 .tagline-box span {
 	line-height: 20px;
 	line-height: 2rem;
+}
+
+.tagline-box-container {
+    position: relative;
+    z-index: 1;
+}
+
+.tagline-box.tagline-shadow::before,
+.tagline-box.tagline-shadow::after {
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    max-height: 100px;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(-3deg);
+}
+
+.tagline-box.tagline-shadow::after {
+    right: 10px;
+    left: auto;
+    transform: rotate(3deg);
+}
+
+.tagline-shadow::before,
+.tagline-shadow::after {
+    opacity: 0.6;
+}
+
+.learn-more {
+    color: black;
+    font-style: italic;
+    float: right;
+    text-decoration: none;
 }
 
 .christmas-list ul {
@@ -1225,3 +1271,23 @@ footer#colophon a:active {
 	border-bottom: 1px solid #E8E6E6;
 }
 
+
+/* Smoothly Scaling YouTube Video */
+
+.video-container {
+margin:auto;
+}
+
+.video {
+margin:auto;
+position: relative;
+padding-bottom: 56.25%;
+}
+
+.video iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}

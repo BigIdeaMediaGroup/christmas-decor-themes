@@ -12,8 +12,8 @@
 
 get_header(); ?>
 
+	<?php echo do_shortcode('[bimg_slider post_type="slide" category="Home Page Slider" id="" class=""]'); ?>
 	<div id="primary" class="content-area">
-    <?php do_shortcode('[bimg_slider post_type="slide" category="Home Page Slider" id="" class=""]'); ?>
 		<main id="main" class="site-main" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
