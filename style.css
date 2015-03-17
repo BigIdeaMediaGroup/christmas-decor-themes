@@ -1398,6 +1398,16 @@ height: 100%;
 	transform: rotate(180deg);
 }
 
+/* About Page */
+
+.about-separator {
+	margin: 3rem 0;
+}
+
+.about-images:first-of-type {
+	margin-bottom: 3rem;
+}
+
 /* Contact Form Page */
 
 .contact-image {
