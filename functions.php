@@ -152,6 +152,11 @@ require get_template_directory() . '/inc/fonts.php';
 require get_template_directory() . '/inc/cmb2.php';
 
 /**
+ * Load CMB Admin Options.
+ */
+require get_template_directory() . '/inc/theme-options-cmb.php';
+
+/**
  * Bootstrap CMB2
  */
 if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
