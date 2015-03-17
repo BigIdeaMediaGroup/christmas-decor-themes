@@ -151,6 +151,8 @@ require get_template_directory() . '/inc/fonts.php';
  */
 require get_template_directory() . '/inc/cmb2.php';
 
+require get_template_directory() . '/inc/cmb2-kurt.php';
+
 /**
  * Load CMB Admin Options.
  */
