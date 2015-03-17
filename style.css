@@ -37,10 +37,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 10.1 Posts and pages
 10.2 Asides
 10.3 Comments
+10.4 Blog
 11.0 Infinite scroll
 12.0 Media
 12.1 Captions
 12.2 Galleries
+
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -780,6 +782,50 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+10.3 Blog
+--------------------------------------------------------------*/
+.blog_post{
+	margin-bottom: 3rem;
+}
+
+.blog_featured{
+	width: 25%;
+	float: left;
+}
+
+.blog_title{
+	width:75%;
+	float: right;
+}
+
+.blog_title h2{
+	margin-top: 0rem;
+}
+
+.blog_excerpt{
+	width: 75%;
+    word-wrap: break-word;
+    float: right;
+}
+
+.blog_permalink{
+	width: 100%;
+	float: right;
+}
+
+.blog_permalink a{
+	float: right;
+}
+
+.blog_post:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
@@ -1393,4 +1439,11 @@ height: 100%;
 .slick-slide img {
     max-height: 100px;
     width: auto;
+}
+
+@media screen and (max-width: 600px) {
+	div.site-branding {
+		float: none;
+		text-align: center;
+	}
 }

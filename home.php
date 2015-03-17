@@ -20,18 +20,27 @@ get_header(); ?>
 					//get_template_part( 'content', get_post_format() );
 					?>
 					<div class="blog_post">
+						<div class="blog_featured">
+							<?php the_post_thumbnail(); ?>
+						</div>
+						<div class="blog_title">
+							<h2><?php the_title(); ?></h2>
+						</div>
 						<div class="blog_excerpt">
+							
 							<?php
 							the_excerpt();
 							?>
+						
 						</div>
 						<div class="blog_permalink">
-							<?php
-							the_permalink();	
-							?>
+							
+							<a href="<?php the_permalink(); ?>"> Read More </a>
+							
 						</div>
+						
 					</div>
-					
+		<div class="break_space"></div>
 					<?php
 					
 					
