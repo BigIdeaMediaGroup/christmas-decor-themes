@@ -1244,6 +1244,16 @@ footer#colophon a:active {
     background: inherit;
 }
 
+.ui-tabs .ui-tabs-nav li {
+	font-family: Lustria, serif;
+	font-size: 1.3rem;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .ui-tabs .ui-tabs-nav li.ui-state-default {
     margin: 0 1px 0 0;
     background: #EBEAEA;
@@ -1275,10 +1285,22 @@ footer#colophon a:active {
     border-top: 3px solid #B31106;
 }
 
+.ui-tabs .ui-tabs-panel {
+	font-family: Lato, sans-serif;
+	font-size: 1.3rem;
+	color: #747474;
+}
+
 /* EXAMPLE: If you include tabs on a page, specify the id of the tab group and
  * calculate the percentage according to the number of tabs. */
 #cd-tab-test .ui-tabs-nav li {
     width: 33.27%;
+}
+
+#about-tabs .ui-tabs-nav li {
+    width: 25%;
+    margin-right: 0;
+    border-right: 1px solid white;
 }
 
 /* jQuery UI Accordion */
@@ -1406,6 +1428,28 @@ height: 100%;
 
 .about-images:first-of-type {
 	margin-bottom: 3rem;
+}
+
+/* Commercial and Residential Pages */
+
+.christmas-service-box {
+	text-align: center;
+}
+
+.christmas-service-text {
+	text-align: justify;
+	hyphens: auto;
+	-moz-hyphens: auto;
+}
+
+.christmas-service-icons {
+	color: #FFF;
+	background-color: #B31106;
+	padding: 2rem 2.2rem;
+	font-size: 3rem !important;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 1;
 }
 
 /* Contact Form Page */
