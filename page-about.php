@@ -12,8 +12,6 @@ get_header(); ?>
 
                 global $post;
                 
-                $text = get_post_meta( $post->ID, '_bimg_about_professionalism_description', true );
-             
                 $page_content = do_shortcode('	[tab title="Professionalism"][bimg_row id="" class="" equal="false"]
                 								[bimg_col id="" class="" columns="2" width="1"] ' . get_post_meta( $post->ID, '_bimg_about_professionalism_description', true ) . '[bimg_separator id="" class="about-separator"]<div class="christmas-list">' . get_post_meta( $post->ID, '_bimg_about_professionalism_list', true ) . '</div>[/bimg_col]
                 								[bimg_col id="" class="" columns="2" width="1"]
@@ -42,7 +40,7 @@ get_header(); ?>
                 								[/tab]');
                 								
                 $page_content .= do_shortcode('	[tab title="Philanthropy"][bimg_row id="" class="" equal="false"]
-                								[bimg_col id="" class="" columns="2" width="1"] ' . get_post_meta( $post->ID, '_bimg_about_philanthropy_description', true ) . '<div class="christmas-list">' . get_post_meta( $post->ID, '_bimg_about_philanthropy_list', true ) . '</div>[/bimg_col]
+                								[bimg_col id="" class="" columns="2" width="1"] ' . get_post_meta( $post->ID, '_bimg_about_philanthropy_description', true ) . '[bimg_separator id="" class="about-separator"]<div class="christmas-list">' . get_post_meta( $post->ID, '_bimg_about_philanthropy_list', true ) . '</div>[/bimg_col]
                 								[bimg_col id="" class="" columns="2" width="1"]
                 								[bimg_image id="" class="aligncenter about-images" img_url="' . get_post_meta( $post->ID, '_bimg_about_philanthropy_image_1', true ) . '" alt="Entryway of brick home decorated with garland and lights" scale="false" url="" target="false"]
                 								[bimg_image id="" class="aligncenter about-images" img_url="' . get_post_meta( $post->ID, '_bimg_about_philanthropy_image_2', true ) . '" alt="" scale="false" url="" target="false"]
@@ -50,7 +48,7 @@ get_header(); ?>
                 								[/bimg_row]
                 								[/tab]');
                 
-                echo do_shortcode('[bimg_tabs id="abouttabs" class=""]' . $page_content . '[/bimg_tabs]');
+                echo do_shortcode('[bimg_tabs id="about-tabs" class=""]' . $page_content . '[/bimg_tabs]');
             
             ?>
 

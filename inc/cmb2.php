@@ -146,6 +146,182 @@ function bimg_register_home_list_metabox() {
 }
 
 /*
+ * About Page
+ */
+
+add_action( 'cmb2_init', 'bimg_register_about_professionalism_metabox' );
+function bimg_register_about_professionalism_metabox() {
+    $prefix = '_bimg_about_professionalism_';
+
+    $bimg_about_professionalism = new_cmb2_box( array(
+        'id'            => $prefix . 'metabox',
+        'title'         => 'Professionalism',
+		'object_types'  => array( 'page', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		'show_on'       => array( 'id' => array( 1786, ) ), // Specific post IDs to display this metabox
+    ) );
+
+	$bimg_about_professionalism->add_field( array(
+		'name'       => 'Description',
+		'desc'       => 'Short description of your company\'s professionalism.',
+		'id'         => $prefix . 'description',
+		'type'       => 'textarea',
+    ) );
+
+	$bimg_about_professionalism->add_field( array(
+		'name' => 'Highlights List',
+		'id'   => $prefix . 'list',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+	
+	$bimg_about_professionalism->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_1',
+		'type' => 'file',
+	) );
+	
+	$bimg_about_professionalism->add_field( array(
+		'name' => 'Image 2',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_2',
+		'type' => 'file',
+	) );
+}
+
+add_action( 'cmb2_init', 'bimg_register_about_products_metabox' );
+function bimg_register_about_products_metabox() {
+    $prefix = '_bimg_about_products_';
+
+    $bimg_about_products = new_cmb2_box( array(
+        'id'            => $prefix . 'metabox',
+        'title'         => 'Premium Products',
+		'object_types'  => array( 'page', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		'show_on'       => array( 'id' => array( 1786, ) ), // Specific post IDs to display this metabox
+    ) );
+
+	$bimg_about_products->add_field( array(
+		'name'       => 'Description',
+		'desc'       => 'Short description of your company\'s products.',
+		'id'         => $prefix . 'description',
+		'type'       => 'textarea',
+    ) );
+
+	$bimg_about_products->add_field( array(
+		'name' => 'Highlights List',
+		'id'   => $prefix . 'list',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+	
+	$bimg_about_products->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_1',
+		'type' => 'file',
+	) );
+	
+	$bimg_about_products->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_2',
+		'type' => 'file',
+	) );
+}
+
+add_action( 'cmb2_init', 'bimg_register_about_inclusive_metabox' );
+function bimg_register_about_inclusive_metabox() {
+    $prefix = '_bimg_about_inclusive_';
+
+    $bimg_about_inclusive = new_cmb2_box( array(
+        'id'            => $prefix . 'metabox',
+        'title'         => 'All-Inclusive',
+		'object_types'  => array( 'page', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		'show_on'       => array( 'id' => array( 1786, ) ), // Specific post IDs to display this metabox
+    ) );
+
+	$bimg_about_inclusive->add_field( array(
+		'name'       => 'Description',
+		'desc'       => 'Short description of your company\'s all-inclusive experience.',
+		'id'         => $prefix . 'description',
+		'type'       => 'textarea',
+    ) );
+
+	$bimg_about_inclusive->add_field( array(
+		'name' => 'Highlights List',
+		'id'   => $prefix . 'list',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+	
+	$bimg_about_inclusive->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_1',
+		'type' => 'file',
+	) );
+	
+	$bimg_about_inclusive->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_2',
+		'type' => 'file',
+	) );
+}
+
+add_action( 'cmb2_init', 'bimg_register_about_philanthropy_metabox' );
+function bimg_register_about_philanthropy_metabox() {
+    $prefix = '_bimg_about_philanthropy_';
+
+    $bimg_about_philanthropy = new_cmb2_box( array(
+        'id'            => $prefix . 'metabox',
+        'title'         => 'Philanthropy',
+		'object_types'  => array( 'page', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		'show_on'       => array( 'id' => array( 1786, ) ), // Specific post IDs to display this metabox
+    ) );
+
+	$bimg_about_philanthropy->add_field( array(
+		'name'       => 'Description',
+		'desc'       => 'Short description of your company\'s philanthropy.',
+		'id'         => $prefix . 'description',
+		'type'       => 'textarea',
+    ) );
+
+	$bimg_about_philanthropy->add_field( array(
+		'name' => 'Highlights List',
+		'id'   => $prefix . 'list',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+	
+	$bimg_about_philanthropy->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_1',
+		'type' => 'file',
+	) );
+	
+	$bimg_about_philanthropy->add_field( array(
+		'name' => 'Image 1',
+		'desc' => 'Upload an image or enter a URL.',
+		'id'   => $prefix . 'image_2',
+		'type' => 'file',
+	) );
+}
+
+/*
  * Commercial & Residential Services Pages
  */
 add_action( 'cmb2_init', 'bimg_register_services_about_metabox' );
@@ -159,7 +335,7 @@ function bimg_register_services_about_metabox() {
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true, // Show field names on the left
-		'show_on'      => array( 'id' => array( 1705, 146, ) ), // Specific post IDs to display this metabox
+		'show_on'      => array( 'id' => array( 1878, 1880, ) ), // Specific post IDs to display this metabox
     ) );
 
 	$bimg_services_about->add_field( array(
@@ -198,7 +374,7 @@ function bimg_register_client_services_metabox() {
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
-		'show_on'       => array( 'id' => array( 1705, ) ), // Specific post IDs to display this metabox
+		'show_on'       => array( 'id' => array( 1878, ) ), // Specific post IDs to display this metabox
     ) );
 
 	$bimg_client_services->add_field( array(
@@ -273,7 +449,7 @@ function bimg_services_video_metabox() {
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
-		'show_on'       => array( 'id' => array( 1705, 146, ) ), // Specific post IDs to display this metabox
+		'show_on'       => array( 'id' => array( 1878, 1880, ) ), // Specific post IDs to display this metabox
     ) );
 
 	$bimg_services_video->add_field( array(
@@ -296,7 +472,7 @@ function bimg_register_tabs_metabox() {
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
-		'show_on'       => array( 'id' => array( 1705, 146, ) ), // Specific post IDs to display this metabox
+		'show_on'       => array( 'id' => array( 1878, 1880, ) ), // Specific post IDs to display this metabox
     ) );
 
 	$bimg_services_tabs->add_field( array(
