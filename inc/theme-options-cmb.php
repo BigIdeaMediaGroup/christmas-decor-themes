@@ -35,7 +35,7 @@ class bimg_Admin {
 	 */
 	public function __construct() {
 		// Set our title
-		$this->title = __( 'Site Options', 'myprefix' );
+		$this->title = 'Site Options';
 	}
 
 	/**
@@ -84,7 +84,7 @@ class bimg_Admin {
 	 */
 	function add_options_page_metabox() {
 
-		$cmb = new_cmb2_box( array(
+		$siteOptions = new_cmb2_box( array(
 			'id'      => $this->metabox_id,
 			'hookup'  => false,
 			'show_on' => array(
@@ -96,22 +96,109 @@ class bimg_Admin {
 
 		// Set our CMB2 fields
 
-		$cmb->add_field( array(
-			'name' => __( 'Test Text', 'myprefix' ),
-			'desc' => __( 'field description (optional)', 'myprefix' ),
-			'id'   => 'test_text',
-			'type' => 'text',
-			'default' => 'Default Text',
+		$siteOptions->add_field( array(
+			'name'    => 'Theme Color',
+			'desc'    => 'Choose the primary color theme for the site. Colors will apply to the background and the hightlights of certain elements.',
+			'id'      => 'theme_color',
+			'type'    => 'select',
+			'options' => array(
+				'red'   => 'Red',
+				'blue'  => 'Blue',
+				'green' => 'Green',
+			),
 		) );
 
-		$cmb->add_field( array(
-			'name'    => __( 'Test Color Picker', 'myprefix' ),
-			'desc'    => __( 'field description (optional)', 'myprefix' ),
-			'id'      => 'test_colorpicker',
-			'type'    => 'colorpicker',
-			'default' => '#bada55',
+		$siteOptions->add_field( array(
+			'name'    => 'Email',
+			'desc'    => 'Enter the primary business\'s email address',
+			'id'      => 'email',
+			'type'    => 'text_email',
+			'default' => 'address@example.com',
 		) );
 
+		$siteOptions->add_field( array(
+			'name'    => 'Phone Number',
+			'desc'    => 'Ex. (555) 555-5555',
+			'id'      => 'phone',
+			'type'    => 'text_medium',
+			'default' => '(555) 555-5555',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'Site Attribution',
+			'desc'    => 'The name of the entity responsible for site content. This value is used to populate the copyright attribution notice.',
+			'id'      => 'attribution',
+			'type'    => 'text',
+			'default' => 'Christmas Decor',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'Address',
+			'id'      => 'address',
+			'type'    => 'text',
+			'default' => '555 Santa Claus Lane',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'City',
+			'id'      => 'city',
+			'type'    => 'text_medium',
+			'default' => 'North Pole',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'State',
+			'id'      => 'state',
+			'type'    => 'text_small',
+			'default' => 'NP',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'Areacode',
+			'id'      => 'areacode',
+			'type'    => 'text_small',
+			'default' => '55555',
+		) );
+
+		$siteOptions->add_field( array(
+			'name' => '<h2><br>Social Media Integration</h2>',
+			'id'   => 'title',
+			'type' => 'title',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'Delicious',
+			'id'      => 'delicious',
+			'type'    => 'radio_inline',
+			'options' => array (
+				'true'  => 'True',
+				'false' => 'False'
+			),
+			'default' => 'false',
+		) );
+
+		$siteOptions->add_field( array(
+			'name' => 'Delicious URL',
+			'id'   => 'delicious_url',
+			'type' => 'text_url',
+		) );
+
+		$siteOptions->add_field( array(
+			'name'    => 'Digg',
+			'id'      => 'digg',
+			'type'    => 'radio_inline',
+			'options' => array (
+				'true'  => 'True',
+				'false' => 'False'
+			),
+			'default' => 'false',
+		) );
+
+		$siteOptions->add_field( array(
+			'name' => 'Digg URL',
+			'id'   => 'digg_url',
+			'type' => 'text_url',
+		) );
 	}
 
 	/**
